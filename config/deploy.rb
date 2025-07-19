@@ -28,7 +28,7 @@ require 'mina/whenever'
 
 set :application, "rb_test_fork"
 set :application_name, "rb_test_fork"  # Required for mina-puma-nginx gem
-set :repository, 'https://github.com/elik-ru/rb-test-fork.git'
+set :repository, 'https://github.com/elik-ru/rb-mina-test-1752968119.git'
 
 # Fix for mina-puma-systemd gem which uses application_name for service name
 set :puma_service_name, -> { "puma_#{fetch(:application)}_#{fetch(:rails_env)}" }
