@@ -28,7 +28,7 @@ require 'mina/whenever'
 
 set :application, "rb_test_fork"
 set :application_name, "rb_test_fork"  # Required for mina-puma-nginx gem
-set :repository, 'https://github.com/elik-ru/rb-mina-test-1752968119.git'
+set :repository, 'git@github.com:elik-ru/rb-mina-test-1752968949.git'
 
 # Fix for mina-puma-systemd gem which uses application_name for service name
 set :puma_service_name, -> { "puma_#{fetch(:application)}_#{fetch(:rails_env)}" }
@@ -48,7 +48,7 @@ set :ssh_options, lambda {
   options
 }
 
-set :branch, ENV["BRANCH"] || DEPLOY_SETTINGS["default_branch"] || "blueprint-basic-master"
+set :branch, ENV["BRANCH"] || DEPLOY_SETTINGS["default_branch"] || "master"
 set :version_scheme, :datetime
 
 set :ruby_version, File.open(".ruby-version").read
